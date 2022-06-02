@@ -1,0 +1,16 @@
+.toggle {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  &__icon {
+  }
+}
+
+@include mq(phone) {
+  .toggle {
+    &__icon {
+      height: 2rem;
+      width: auto;
+    }
+  }
+}

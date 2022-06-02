@@ -1,0 +1,8 @@
+@mixin mq($width) {
+    @if($width == phone) {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+}
+

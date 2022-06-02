@@ -1,0 +1,125 @@
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 auto;
+  width: 54rem;
+  padding-top: 8rem;
+
+  &__wrapper {
+    width: 100%;
+    min-height: 100%;
+    background-image: var(--desktop-bg);
+    background-color: var(--color-sync-0);
+    background-repeat: no-repeat;
+    background-size: 100% 30rem;
+  }
+
+  &__body {
+    box-shadow: 0 2px 2px var(--color-sync-1);
+    margin-bottom: 5rem;
+  }
+
+  &__info {
+    color: var(--color-contrast-1);
+  }
+
+  &__extra {
+    text-align: center;
+    color: var(--color-contrast-1);
+  }
+
+  &__footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.9rem;
+  }
+}
+
+.app__header {
+  margin-bottom: 4rem;
+}
+
+.app__addtodo {
+  margin-bottom: 2.5rem;
+}
+
+.app__clear__button {
+  text-transform: capitalize;
+  color: var(--color-contrast-1);
+  &:hover {
+    color: var(--color-contrast-2);
+  }
+}
+
+.app__body {
+  background-color: var(--app-body-col);
+  box-shadow: 0px 4px 40px -10px var(--shadow-col);
+  border-radius: 0.4rem;
+}
+
+.app__filter {
+  display: none;
+
+  &--pc {
+    display: block;
+  }
+}
+
+@include mq(phone) {
+  .app {
+    max-width: 32.7rem;
+    padding-top: 4.2rem;
+
+    &__wrapper {
+      background-image: var(--phone-bg);
+      background-size: 100% 20rem;
+    }
+
+    &__header {
+      margin-bottom: 3.4rem;
+    }
+
+    &__addtodo {
+      margin-bottom: 1.5rem;
+    }
+    &__filter {
+      display: block;
+
+      &--phone {
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
+        background-color: var(--app-body-col);
+        box-shadow: 0px 4px 40px -10px var(--shadow-col);
+        margin-bottom: 4.3rem;
+      }
+
+      &--pc {
+        display: none;
+      }
+    }
+    &__body {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    &__clear__button {
+      font-size: 1.2rem;
+    }
+
+    &__extra {
+      font-size: 1.2rem;
+    }
+  }
+}

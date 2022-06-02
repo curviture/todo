@@ -1,0 +1,25 @@
+.filter {
+  font-weight: 700;
+  &__button {
+    font-size: 1.5rem;
+    color: var(--color-contrast-1);
+    &:not(:last-child) {
+      margin-right: 1.8rem;
+    }
+    &--active {
+      color: var(--color-highlight);
+    }
+  }
+}
+
+@include mq(phone) {
+  .filter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    font-size: 1.2rem;
+    &__button {
+      font-size: 1.2rem;
+    }
+  }
+}

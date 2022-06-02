@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+:root {
+  --color-sync-1: hsl(0deg, 0%, 98%);
+  --color-sync-2: hsl(236deg, 33%, 92%);
+  --color-sync-3: hsl(233deg, 11%, 84%);
+  --color-constrast-1: hsl(236deg, 9%, 61%);
+  --color-contrast-2: hsl(235deg, 19%, 35%);
+  --desktop-bg: url("../assets/bg-desktop-light.jpg");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+  background-image: var(--desktop-bg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+body * {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.header__title {
+  color: var(--text-theme-main-color);
+  font-size: 3.2rem;
+  text-transform: uppercase;
+}
+
+.toggle {
+  border: none;
+}
+.app {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 auto;
+  width: 54rem;
+  padding-top: 8rem;
+}
+.app_body {
+  box-shadow: 0 2px 2px var(--color-sync-low-1);
+}
+
+.app__header {
+  margin-bottom: 5rem;
+}

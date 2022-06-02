@@ -1,0 +1,42 @@
+.add-todo {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.add-todo__form {
+  width: 100%;
+  position: relative;
+}
+
+.add-todo__form:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--color-sync-3);
+  border-radius: 50%;
+  left: 2.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.add-todo__input {
+  caret-color: var(--color-highlight);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@include mq(phone) {
+  .add-todo__form {
+    border-radius: 1rem;
+
+    &:before {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
