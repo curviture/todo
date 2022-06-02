@@ -8,14 +8,6 @@ import TodoFilter from "./components/TodoFilter/TodoFilter";
 
 import "./Sass/App.scss";
 
-const fakeTodos = (amount = 5) => {
-  const td = [];
-  for (let i = 0; i < amount; i++) {
-    td.push({ task: "aaaaa", status: "active", id: i });
-  }
-  return td;
-};
-
 const reorder = (list, startIndex, endIntex) => {
   const result = Array.from(list);
   const [removed] = result.splice(startIndex, 1);
@@ -25,7 +17,13 @@ const reorder = (list, startIndex, endIntex) => {
 };
 
 function App() {
-  const [todos, setTodos] = useState(fakeTodos());
+  const [todos, setTodos] = useState([
+    {
+      task: "add your first task",
+      id: 1,
+      status: "active",
+    },
+  ]);
   const [filter, setFilter] = useState("all");
   const [theme, setTheme] = useState("light");
   const themeToggleHandler = () => {

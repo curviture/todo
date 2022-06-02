@@ -5,7 +5,11 @@ function Toggle(props) {
   };
   return (
     <button className="toggle" onClick={clickHandler}>
-      <img className="toggle__icon" src={src} alt="theme changing icon" />
+      <img
+        className="toggle__icon"
+        src={src}
+        alt="website theme changing icon"
+      />
     </button>
   );
 }
